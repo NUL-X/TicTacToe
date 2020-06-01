@@ -25,7 +25,7 @@ namespace TicTacToe.Forms
         
         public void SetStatusMessage(string msg){}
         
-        public void mnDisconnect_Click(object sender, EventArgs args){}
+        public void DisconnectButton_Click(object sender, EventArgs args){}
         
     }
 }
