@@ -51,7 +51,7 @@ namespace TicTacToe.Entities
 			// Return if it is not CPU turn
 			//_____________________________________________________________________________________________
 
-			if (_gameForm.wTurn==wTypePlayer)
+			if (_gameForm.wTurn==_moveTypePlayer)
 				return;
 
 			//_____________________________________________________________________________________________
@@ -62,7 +62,7 @@ namespace TicTacToe.Entities
 
 			PlayWinner(false,ref wNothing);
 
-			if (_gameForm.wTurn==wTypePlayer)
+			if (_gameForm.wTurn==_moveTypePlayer)
 				return;
 
 			//_____________________________________________________________________________________________
@@ -73,7 +73,7 @@ namespace TicTacToe.Entities
 
 			PlayDefensive();
 
-			if (_gameForm.wTurn==wTypePlayer)
+			if (_gameForm.wTurn==_moveTypePlayer)
 				return;
 
 			//_____________________________________________________________________________________________
@@ -93,7 +93,7 @@ namespace TicTacToe.Entities
 			// (sums lines and check totals latter)
 			//_____________________________________________________________________________________________
 
-			if (wDifficulty==enDifficulty.Average)
+			if (_difficulty==AIDifficulty.Average)
 			{
 				rGoodMove=true;
 				return;
@@ -117,7 +117,7 @@ namespace TicTacToe.Entities
 
 			int wCPUSum=0;
 
-			if (wTypeCPU==enPlayType.Cross)
+			if (_moveTypeCpu==MoveType.Cross)
 				wCPUSum=20;
 			else
 				wCPUSum=2;
@@ -129,21 +129,21 @@ namespace TicTacToe.Entities
 
 			if (wSum1==wCPUSum)
 			{
-				if (_gameForm.wBoard[1,1]==enPlayType.None)
+				if (_gameForm.wBoard[1,1]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(1,1);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[1,2]==enPlayType.None)
+				if (_gameForm.wBoard[1,2]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(1,2);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[1,3]==enPlayType.None)
+				if (_gameForm.wBoard[1,3]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(1,3);
@@ -154,21 +154,21 @@ namespace TicTacToe.Entities
 
 			if (wSum2==wCPUSum)
 			{
-				if (_gameForm.wBoard[2,1]==enPlayType.None)
+				if (_gameForm.wBoard[2,1]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(2,1);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[2,2]==enPlayType.None)
+				if (_gameForm.wBoard[2,2]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(2,2);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[2,3]==enPlayType.None)
+				if (_gameForm.wBoard[2,3]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(2,3);
@@ -179,21 +179,21 @@ namespace TicTacToe.Entities
 
 			if (wSum3==wCPUSum)
 			{
-				if (_gameForm.wBoard[3,1]==enPlayType.None)
+				if (_gameForm.wBoard[3,1]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(3,1);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[3,2]==enPlayType.None)
+				if (_gameForm.wBoard[3,2]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(3,2);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[3,3]==enPlayType.None)
+				if (_gameForm.wBoard[3,3]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(3,3);
@@ -204,21 +204,21 @@ namespace TicTacToe.Entities
 			
 			if (wSum4==wCPUSum)
 			{
-				if (_gameForm.wBoard[1,1]==enPlayType.None)
+				if (_gameForm.wBoard[1,1]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(1,1);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[2,1]==enPlayType.None)
+				if (_gameForm.wBoard[2,1]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(2,1);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[3,1]==enPlayType.None)
+				if (_gameForm.wBoard[3,1]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(3,1);
@@ -229,21 +229,21 @@ namespace TicTacToe.Entities
 
 			if (wSum5==wCPUSum)
 			{
-				if (_gameForm.wBoard[1,2]==enPlayType.None)
+				if (_gameForm.wBoard[1,2]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(1,2);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[2,2]==enPlayType.None)
+				if (_gameForm.wBoard[2,2]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(2,2);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[3,2]==enPlayType.None)
+				if (_gameForm.wBoard[3,2]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(3,2);
@@ -254,21 +254,21 @@ namespace TicTacToe.Entities
 
 			if (wSum6==wCPUSum)
 			{
-				if (_gameForm.wBoard[1,3]==enPlayType.None)
+				if (_gameForm.wBoard[1,3]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(1,3);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[2,3]==enPlayType.None)
+				if (_gameForm.wBoard[2,3]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(2,3);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[3,3]==enPlayType.None)
+				if (_gameForm.wBoard[3,3]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(3,3);
@@ -279,21 +279,21 @@ namespace TicTacToe.Entities
 
 			if (wSum7==wCPUSum)
 			{
-				if (_gameForm.wBoard[1,1]==enPlayType.None)
+				if (_gameForm.wBoard[1,1]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(1,1);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[2,2]==enPlayType.None)
+				if (_gameForm.wBoard[2,2]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(2,2);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[3,3]==enPlayType.None)
+				if (_gameForm.wBoard[3,3]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(3,3);
@@ -304,21 +304,21 @@ namespace TicTacToe.Entities
 
 			if (wSum8==wCPUSum)
 			{
-				if (_gameForm.wBoard[3,1]==enPlayType.None)
+				if (_gameForm.wBoard[3,1]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(3,1);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[2,2]==enPlayType.None)
+				if (_gameForm.wBoard[2,2]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(2,2);
 					rGoodMove=true;
 					return;
 				}
-				if (_gameForm.wBoard[1,3]==enPlayType.None)
+				if (_gameForm.wBoard[1,3]==MoveType.None)
 				{
 					if (pJustVerifyMove==false)
 						_gameForm.MakeMove(1,3);
@@ -342,7 +342,7 @@ namespace TicTacToe.Entities
 			// In easy and average difficulty sometimes it doesn�t make a defensive move
 			//_____________________________________________________________________________________________
 
-			if (wDifficulty==enDifficulty.Average)		
+			if (_difficulty==AIDifficulty.Average)		
 			{
 				System.Threading.Thread.Sleep(15);
 				System.Random objRandom=new Random();
@@ -351,7 +351,7 @@ namespace TicTacToe.Entities
 					return;
 			}
 
-			if (wDifficulty==enDifficulty.Easy)		
+			if (_difficulty==AIDifficulty.Easy)		
 			{
 				System.Threading.Thread.Sleep(15);
 				System.Random objRandom=new Random();
@@ -383,7 +383,7 @@ namespace TicTacToe.Entities
 
 			int wPlayerSum=0;
 
-			if (wTypePlayer==enPlayType.Cross)
+			if (_moveTypePlayer==MoveType.Cross)
 				wPlayerSum=20;
 			else
 				wPlayerSum=2;
@@ -395,81 +395,81 @@ namespace TicTacToe.Entities
 
 			if (wSum1==wPlayerSum)
 			{
-				if (_gameForm.wBoard[1,1]==enPlayType.None) {
+				if (_gameForm.wBoard[1,1]==MoveType.None) {
 					_gameForm.MakeMove(1,1);return;}
-				if (_gameForm.wBoard[1,2]==enPlayType.None) {
+				if (_gameForm.wBoard[1,2]==MoveType.None) {
 					_gameForm.MakeMove(1,2);return;}
-				if (_gameForm.wBoard[1,3]==enPlayType.None) {
+				if (_gameForm.wBoard[1,3]==MoveType.None) {
 					_gameForm.MakeMove(1,3);return;}
 			}
 
 			if (wSum2==wPlayerSum)
 			{
-				if (_gameForm.wBoard[2,1]==enPlayType.None) {
+				if (_gameForm.wBoard[2,1]==MoveType.None) {
 					_gameForm.MakeMove(2,1);return;}
-				if (_gameForm.wBoard[2,2]==enPlayType.None) {
+				if (_gameForm.wBoard[2,2]==MoveType.None) {
 					_gameForm.MakeMove(2,2);return;}
-				if (_gameForm.wBoard[2,3]==enPlayType.None) {
+				if (_gameForm.wBoard[2,3]==MoveType.None) {
 					_gameForm.MakeMove(2,3);return;}
 			}
 
 			if (wSum3==wPlayerSum)
 			{
-				if (_gameForm.wBoard[3,1]==enPlayType.None) {
+				if (_gameForm.wBoard[3,1]==MoveType.None) {
 					_gameForm.MakeMove(3,1);return;}
-				if (_gameForm.wBoard[3,2]==enPlayType.None) {
+				if (_gameForm.wBoard[3,2]==MoveType.None) {
 					_gameForm.MakeMove(3,2);return;}
-				if (_gameForm.wBoard[3,3]==enPlayType.None) {
+				if (_gameForm.wBoard[3,3]==MoveType.None) {
 					_gameForm.MakeMove(3,3);return;}
 			}
 			
 			if (wSum4==wPlayerSum)
 			{
-				if (_gameForm.wBoard[1,1]==enPlayType.None) {
+				if (_gameForm.wBoard[1,1]==MoveType.None) {
 					_gameForm.MakeMove(1,1);return;}
-				if (_gameForm.wBoard[2,1]==enPlayType.None) {
+				if (_gameForm.wBoard[2,1]==MoveType.None) {
 					_gameForm.MakeMove(2,1);return;}
-				if (_gameForm.wBoard[3,1]==enPlayType.None) {
+				if (_gameForm.wBoard[3,1]==MoveType.None) {
 					_gameForm.MakeMove(3,1);return;}
 			}
 
 			if (wSum5==wPlayerSum)
 			{
-				if (_gameForm.wBoard[1,2]==enPlayType.None) {
+				if (_gameForm.wBoard[1,2]==MoveType.None) {
 					_gameForm.MakeMove(1,2);return;}
-				if (_gameForm.wBoard[2,2]==enPlayType.None) {
+				if (_gameForm.wBoard[2,2]==MoveType.None) {
 					_gameForm.MakeMove(2,2);return;}
-				if (_gameForm.wBoard[3,2]==enPlayType.None) {
+				if (_gameForm.wBoard[3,2]==MoveType.None) {
 					_gameForm.MakeMove(3,2);return;}
 			}
 
 			if (wSum6==wPlayerSum)
 			{
-				if (_gameForm.wBoard[1,3]==enPlayType.None) {
+				if (_gameForm.wBoard[1,3]==MoveType.None) {
 					_gameForm.MakeMove(1,3);return;}
-				if (_gameForm.wBoard[2,3]==enPlayType.None) {
+				if (_gameForm.wBoard[2,3]==MoveType.None) {
 					_gameForm.MakeMove(2,3);return;}
-				if (_gameForm.wBoard[3,3]==enPlayType.None) {
+				if (_gameForm.wBoard[3,3]==MoveType.None) {
 					_gameForm.MakeMove(3,3);return;}
 			}
 
 			if (wSum7==wPlayerSum)
 			{
-				if (_gameForm.wBoard[1,1]==enPlayType.None) {
+				if (_gameForm.wBoard[1,1]==MoveType.None) {
 					_gameForm.MakeMove(1,1);return;}
-				if (_gameForm.wBoard[2,2]==enPlayType.None) {
+				if (_gameForm.wBoard[2,2]==MoveType.None) {
 					_gameForm.MakeMove(2,2);return;}
-				if (_gameForm.wBoard[3,3]==enPlayType.None) {
+				if (_gameForm.wBoard[3,3]==MoveType.None) {
 					_gameForm.MakeMove(3,3);return;}
 			}
 
 			if (wSum8==wPlayerSum)
 			{
-				if (_gameForm.wBoard[3,1]==enPlayType.None) {
+				if (_gameForm.wBoard[3,1]==MoveType.None) {
 					_gameForm.MakeMove(3,1);return;}
-				if (_gameForm.wBoard[2,2]==enPlayType.None) {
+				if (_gameForm.wBoard[2,2]==MoveType.None) {
 					_gameForm.MakeMove(2,2);return;}
-				if (_gameForm.wBoard[1,3]==enPlayType.None) {
+				if (_gameForm.wBoard[1,3]==MoveType.None) {
 					_gameForm.MakeMove(1,3);return;}
 			}
 			
@@ -503,9 +503,9 @@ namespace TicTacToe.Entities
 		
 			bool wGoodMove=false;
 
-			if (wDifficulty==enDifficulty.Hard)
+			if (_difficulty==AIDifficulty.Hard)
 			{
-				if (wTypePlayer==enPlayType.Cross)
+				if (_moveTypePlayer==MoveType.Cross)
 				{
 				
 					//_____________________________________________________________________________________________
@@ -514,25 +514,25 @@ namespace TicTacToe.Entities
 					//	in case there is a player�s piece on the corner
 					//_____________________________________________________________________________________________
 					
-					if ((_gameForm.wBoard[1,1]==enPlayType.None) && (_gameForm.wBoard[3,3]==wTypePlayer))
+					if ((_gameForm.wBoard[1,1]==MoveType.None) && (_gameForm.wBoard[3,3]==_moveTypePlayer))
 					{
 						_gameForm.MakeMove(1,1);
 						return;
 					}
 									
-					if ((_gameForm.wBoard[1,3]==enPlayType.None) && (_gameForm.wBoard[3,1]==wTypePlayer))
+					if ((_gameForm.wBoard[1,3]==MoveType.None) && (_gameForm.wBoard[3,1]==_moveTypePlayer))
 					{
 						_gameForm.MakeMove(1,3);
 						return;
 					}
 					
-					if ((_gameForm.wBoard[3,1]==enPlayType.None) && (_gameForm.wBoard[1,3]==wTypePlayer))
+					if ((_gameForm.wBoard[3,1]==MoveType.None) && (_gameForm.wBoard[1,3]==_moveTypePlayer))
 					{
 						_gameForm.MakeMove(3,1);
 						return;
 					}
 					
-					if ((_gameForm.wBoard[3,3]==enPlayType.None) && (_gameForm.wBoard[1,1]==wTypePlayer))
+					if ((_gameForm.wBoard[3,3]==MoveType.None) && (_gameForm.wBoard[1,1]==_moveTypePlayer))
 					{
 						_gameForm.MakeMove(3,3);
 						return;
@@ -545,7 +545,7 @@ namespace TicTacToe.Entities
 					// Try in the middle
 					//_____________________________________________________________________________________________
 
-					if (_gameForm.wBoard[2,2]==enPlayType.None)
+					if (_gameForm.wBoard[2,2]==MoveType.None)
 					{
 						_gameForm.MakeMove(2,2);
 						return;
@@ -560,7 +560,7 @@ namespace TicTacToe.Entities
 			// Try smart moves to avoid "traps" (HARD difficulty)
 			//_____________________________________________________________________________________________
 
-			if (wDifficulty==enDifficulty.Hard)
+			if (_difficulty==AIDifficulty.Hard)
 			{
 				
 				//_____________________________________________________________________________________________
@@ -580,11 +580,11 @@ namespace TicTacToe.Entities
 				//
 				//_____________________________________________________________________________________________
 
-				if ((_gameForm.wBoard[1,2]==enPlayType.None) && ((_gameForm.wBoard[1,3]==wTypePlayer) && (_gameForm.wBoard[3,1]==wTypePlayer)))
+				if ((_gameForm.wBoard[1,2]==MoveType.None) && ((_gameForm.wBoard[1,3]==_moveTypePlayer) && (_gameForm.wBoard[3,1]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[1,2]=wTypeCPU;
+					_gameForm.wBoard[1,2]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[1,2]=enPlayType.None;
+					_gameForm.wBoard[1,2]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -593,11 +593,11 @@ namespace TicTacToe.Entities
 					}
 				}
 
-				if ((_gameForm.wBoard[3,2]==enPlayType.None) && ((_gameForm.wBoard[1,3]==wTypePlayer) && (_gameForm.wBoard[3,1]==wTypePlayer)))
+				if ((_gameForm.wBoard[3,2]==MoveType.None) && ((_gameForm.wBoard[1,3]==_moveTypePlayer) && (_gameForm.wBoard[3,1]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[3,2]=wTypeCPU;
+					_gameForm.wBoard[3,2]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[3,2]=enPlayType.None;
+					_gameForm.wBoard[3,2]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -606,11 +606,11 @@ namespace TicTacToe.Entities
 					}
 				}
 
-				if ((_gameForm.wBoard[1,2]==enPlayType.None) && ((_gameForm.wBoard[1,1]==wTypePlayer) && (_gameForm.wBoard[3,3]==wTypePlayer)))
+				if ((_gameForm.wBoard[1,2]==MoveType.None) && ((_gameForm.wBoard[1,1]==_moveTypePlayer) && (_gameForm.wBoard[3,3]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[1,2]=wTypeCPU;
+					_gameForm.wBoard[1,2]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[1,2]=enPlayType.None;
+					_gameForm.wBoard[1,2]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -619,11 +619,11 @@ namespace TicTacToe.Entities
 					}
 				}
 
-				if ((_gameForm.wBoard[3,2]==enPlayType.None) && ((_gameForm.wBoard[1,1]==wTypePlayer) && (_gameForm.wBoard[3,3]==wTypePlayer)))
+				if ((_gameForm.wBoard[3,2]==MoveType.None) && ((_gameForm.wBoard[1,1]==_moveTypePlayer) && (_gameForm.wBoard[3,3]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[3,2]=wTypeCPU;
+					_gameForm.wBoard[3,2]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[3,2]=enPlayType.None;
+					_gameForm.wBoard[3,2]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -650,11 +650,11 @@ namespace TicTacToe.Entities
 				//
 				//_____________________________________________________________________________________________
 
-				if ((_gameForm.wBoard[1,2]==enPlayType.None) && ((_gameForm.wBoard[2,1]==wTypePlayer) && (_gameForm.wBoard[3,3]==wTypePlayer)))
+				if ((_gameForm.wBoard[1,2]==MoveType.None) && ((_gameForm.wBoard[2,1]==_moveTypePlayer) && (_gameForm.wBoard[3,3]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[1,2]=wTypeCPU;
+					_gameForm.wBoard[1,2]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[1,2]=enPlayType.None;
+					_gameForm.wBoard[1,2]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -663,11 +663,11 @@ namespace TicTacToe.Entities
 					}
 				}
 
-				if ((_gameForm.wBoard[2,1]==enPlayType.None) && ((_gameForm.wBoard[1,1]==wTypePlayer) && (_gameForm.wBoard[3,2]==wTypePlayer)))
+				if ((_gameForm.wBoard[2,1]==MoveType.None) && ((_gameForm.wBoard[1,1]==_moveTypePlayer) && (_gameForm.wBoard[3,2]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[2,1]=wTypeCPU;
+					_gameForm.wBoard[2,1]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[2,1]=enPlayType.None;
+					_gameForm.wBoard[2,1]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -676,11 +676,11 @@ namespace TicTacToe.Entities
 					}
 				}
 
-				if ((_gameForm.wBoard[2,3]==enPlayType.None) && ((_gameForm.wBoard[1,3]==wTypePlayer) && (_gameForm.wBoard[3,2]==wTypePlayer)))
+				if ((_gameForm.wBoard[2,3]==MoveType.None) && ((_gameForm.wBoard[1,3]==_moveTypePlayer) && (_gameForm.wBoard[3,2]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[2,3]=wTypeCPU;
+					_gameForm.wBoard[2,3]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[2,3]=enPlayType.None;
+					_gameForm.wBoard[2,3]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -689,11 +689,11 @@ namespace TicTacToe.Entities
 					}
 				}
 
-				if ((_gameForm.wBoard[3,2]==enPlayType.None) && ((_gameForm.wBoard[2,3]==wTypePlayer) && (_gameForm.wBoard[3,1]==wTypePlayer)))
+				if ((_gameForm.wBoard[3,2]==MoveType.None) && ((_gameForm.wBoard[2,3]==_moveTypePlayer) && (_gameForm.wBoard[3,1]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[3,2]=wTypeCPU;
+					_gameForm.wBoard[3,2]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[3,2]=enPlayType.None;
+					_gameForm.wBoard[3,2]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -711,11 +711,11 @@ namespace TicTacToe.Entities
 				//				O| | 		 |O| 
 				//_____________________________________________________________________________________________
 
-				if ((_gameForm.wBoard[2,3]==enPlayType.None) && ((_gameForm.wBoard[3,1]==wTypePlayer) && (_gameForm.wBoard[1,2]==wTypePlayer)))
+				if ((_gameForm.wBoard[2,3]==MoveType.None) && ((_gameForm.wBoard[3,1]==_moveTypePlayer) && (_gameForm.wBoard[1,2]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[2,3]=wTypeCPU;
+					_gameForm.wBoard[2,3]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[2,3]=enPlayType.None;
+					_gameForm.wBoard[2,3]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -724,11 +724,11 @@ namespace TicTacToe.Entities
 					}
 				}
 
-				if ((_gameForm.wBoard[2,1]==enPlayType.None) && ((_gameForm.wBoard[1,1]==wTypePlayer) && (_gameForm.wBoard[3,2]==wTypePlayer)))
+				if ((_gameForm.wBoard[2,1]==MoveType.None) && ((_gameForm.wBoard[1,1]==_moveTypePlayer) && (_gameForm.wBoard[3,2]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[2,1]=wTypeCPU;
+					_gameForm.wBoard[2,1]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[2,1]=enPlayType.None;
+					_gameForm.wBoard[2,1]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -754,11 +754,11 @@ namespace TicTacToe.Entities
 				//
 				//_____________________________________________________________________________________________
 
-				if ((_gameForm.wBoard[1,1]==enPlayType.None) && ((_gameForm.wBoard[1,2]==wTypePlayer) && (_gameForm.wBoard[2,1]==wTypePlayer)))
+				if ((_gameForm.wBoard[1,1]==MoveType.None) && ((_gameForm.wBoard[1,2]==_moveTypePlayer) && (_gameForm.wBoard[2,1]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[1,1]=wTypeCPU;
+					_gameForm.wBoard[1,1]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[1,1]=enPlayType.None;
+					_gameForm.wBoard[1,1]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -767,11 +767,11 @@ namespace TicTacToe.Entities
 					}
 				}
 
-				if ((_gameForm.wBoard[1,3]==enPlayType.None) && ((_gameForm.wBoard[1,2]==wTypePlayer) && (_gameForm.wBoard[2,3]==wTypePlayer)))
+				if ((_gameForm.wBoard[1,3]==MoveType.None) && ((_gameForm.wBoard[1,2]==_moveTypePlayer) && (_gameForm.wBoard[2,3]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[1,3]=wTypeCPU;
+					_gameForm.wBoard[1,3]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[1,3]=enPlayType.None;
+					_gameForm.wBoard[1,3]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -780,11 +780,11 @@ namespace TicTacToe.Entities
 					}
 				}
 
-				if ((_gameForm.wBoard[3,3]==enPlayType.None) && ((_gameForm.wBoard[2,3]==wTypePlayer) && (_gameForm.wBoard[3,2]==wTypePlayer)))
+				if ((_gameForm.wBoard[3,3]==MoveType.None) && ((_gameForm.wBoard[2,3]==_moveTypePlayer) && (_gameForm.wBoard[3,2]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[3,3]=wTypeCPU;
+					_gameForm.wBoard[3,3]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[3,3]=enPlayType.None;
+					_gameForm.wBoard[3,3]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -793,11 +793,11 @@ namespace TicTacToe.Entities
 					}
 				}
 
-				if ((_gameForm.wBoard[3,1]==enPlayType.None) && ((_gameForm.wBoard[2,1]==wTypePlayer) && (_gameForm.wBoard[3,2]==wTypePlayer)))
+				if ((_gameForm.wBoard[3,1]==MoveType.None) && ((_gameForm.wBoard[2,1]==_moveTypePlayer) && (_gameForm.wBoard[3,2]==_moveTypePlayer)))
 				{
-					_gameForm.wBoard[3,1]=wTypeCPU;
+					_gameForm.wBoard[3,1]=_moveTypeCpu;
 					PlayWinner(true,ref wGoodMove);
-					_gameForm.wBoard[3,1]=enPlayType.None;
+					_gameForm.wBoard[3,1]=MoveType.None;
 
 					if (wGoodMove==true)
 					{
@@ -853,25 +853,25 @@ namespace TicTacToe.Entities
 				wPosicaoPontaX[4]=3;wPosicaoPontaY[4]=1;
 			}
 			
-			if (_gameForm.wBoard[wPosicaoPontaX[1],wPosicaoPontaY[1]]==enPlayType.None)
+			if (_gameForm.wBoard[wPosicaoPontaX[1],wPosicaoPontaY[1]]==MoveType.None)
 			{
 				_gameForm.MakeMove(wPosicaoPontaX[1],wPosicaoPontaY[1]);
 				return;
 			}
 		
-			if (_gameForm.wBoard[wPosicaoPontaX[2],wPosicaoPontaY[2]]==enPlayType.None)
+			if (_gameForm.wBoard[wPosicaoPontaX[2],wPosicaoPontaY[2]]==MoveType.None)
 			{
 				_gameForm.MakeMove(wPosicaoPontaX[2],wPosicaoPontaY[2]);
 				return;
 			}
 		
-			if (_gameForm.wBoard[wPosicaoPontaX[3],wPosicaoPontaY[3]]==enPlayType.None)
+			if (_gameForm.wBoard[wPosicaoPontaX[3],wPosicaoPontaY[3]]==MoveType.None)
 			{
 				_gameForm.MakeMove(wPosicaoPontaX[3],wPosicaoPontaY[3]);
 				return;
 			}
 		
-			if (_gameForm.wBoard[wPosicaoPontaX[4],wPosicaoPontaY[4]]==enPlayType.None)
+			if (_gameForm.wBoard[wPosicaoPontaX[4],wPosicaoPontaY[4]]==MoveType.None)
 			{
 				_gameForm.MakeMove(wPosicaoPontaX[4],wPosicaoPontaY[4]);
 				return;
@@ -882,25 +882,25 @@ namespace TicTacToe.Entities
 			// Try on the sides
 			//_____________________________________________________________________________________________
 
-			if (_gameForm.wBoard[1,2]==enPlayType.None)
+			if (_gameForm.wBoard[1,2]==MoveType.None)
 			{
 				_gameForm.MakeMove(1,2);
 				return;
 			}
 
-			if (_gameForm.wBoard[2,1]==enPlayType.None)
+			if (_gameForm.wBoard[2,1]==MoveType.None)
 			{
 				_gameForm.MakeMove(2,1);
 				return;
 			}
 
-			if (_gameForm.wBoard[2,3]==enPlayType.None)
+			if (_gameForm.wBoard[2,3]==MoveType.None)
 			{
 				_gameForm.MakeMove(2,3);
 				return;
 			}
 
-			if (_gameForm.wBoard[3,2]==enPlayType.None)
+			if (_gameForm.wBoard[3,2]==MoveType.None)
 			{
 				_gameForm.MakeMove(3,2);
 				return;
@@ -911,7 +911,7 @@ namespace TicTacToe.Entities
 			// Try in the middle
 			//_____________________________________________________________________________________________
 
-			if (_gameForm.wBoard[2,2]==enPlayType.None)
+			if (_gameForm.wBoard[2,2]==MoveType.None)
 			{
 				_gameForm.MakeMove(2,2);
 				return;

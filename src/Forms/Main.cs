@@ -10,10 +10,31 @@ namespace TicTacToe.Forms
         public bool isConnected = false;
         public bool isClient = false;
         
+        //_____________________________________________________________________________________________
+        //
+        // Who plays, who won, the kind of player is CPU and human
+        //_____________________________________________________________________________________________
+
+        public MoveType wTurn = MoveType.Ball;
+        public MoveType wWinner = MoveType.None;
+        
         // these 2 fields needed in AI.cs
         public MoveType _moveTypeCpu=MoveType.Cross;
         public MoveType _MoveTypePlayer=MoveType.Ball;
         public AIDifficulty _difficulty;    // still needs to be initialised?
+        
+        
+        //_____________________________________________________________________________________________
+        //
+        // Board is saved in a matrix
+        //_____________________________________________________________________________________________
+
+        public MoveType[,] wBoard = new MoveType[4, 4] {{MoveType.None,MoveType.None,MoveType.None,MoveType.None},
+            {MoveType.None,MoveType.None,MoveType.None,MoveType.None},
+            {MoveType.None,MoveType.None,MoveType.None,MoveType.None},
+            {MoveType.None,MoveType.None,MoveType.None,MoveType.None}};
+        
+        
         public Main()
         {
             InitializeComponent();
