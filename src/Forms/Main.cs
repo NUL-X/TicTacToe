@@ -1,5 +1,7 @@
 ﻿using System;
+using static TicTacToe.Entities.Structures;
 using System.Windows.Forms;
+using TicTacToe.Entities;
 
 namespace TicTacToe.Forms
 {
@@ -7,6 +9,11 @@ namespace TicTacToe.Forms
     {
         public bool isConnected = false;
         public bool isClient = false;
+        
+        // these 2 fields needed in AI.cs
+        public MoveType _moveTypeCpu=MoveType.Cross;
+        public MoveType _MoveTypePlayer=MoveType.Ball;
+        public AIDifficulty _difficulty;    // still needs to be initialised?
         public Main()
         {
             InitializeComponent();
