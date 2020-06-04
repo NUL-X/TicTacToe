@@ -8,16 +8,16 @@
         public enum MoveType
         {
             None = 0,
-            Ball = 1,
-            Cross = 10
+            Ball = -1,
+            Cross = 1
         }
         
         // AI difficulty
         public enum AIDifficulty
         {
             Easy = 0,
-            Average = 1,
-            Hard = 2
+            Medium = 1,
+            Impossible = 2
         }
         
         // Indicates which line to draw when player wins

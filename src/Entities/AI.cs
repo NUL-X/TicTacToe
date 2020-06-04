@@ -93,7 +93,7 @@ namespace TicTacToe.Entities
 			// (sums lines and check totals latter)
 			//_____________________________________________________________________________________________
 
-			if (_difficulty==AIDifficulty.Average)
+			if (_difficulty==AIDifficulty.Medium)
 			{
 				rGoodMove=true;
 				return;
@@ -342,7 +342,7 @@ namespace TicTacToe.Entities
 			// In easy and average difficulty sometimes it doesn�t make a defensive move
 			//_____________________________________________________________________________________________
 
-			if (_difficulty==AIDifficulty.Average)		
+			if (_difficulty==AIDifficulty.Medium)		
 			{
 				System.Threading.Thread.Sleep(15);
 				System.Random objRandom=new Random();
@@ -503,7 +503,7 @@ namespace TicTacToe.Entities
 		
 			bool wGoodMove=false;
 
-			if (_difficulty==AIDifficulty.Hard)
+			if (_difficulty==AIDifficulty.Impossible)
 			{
 				if (_moveTypePlayer==MoveType.Cross)
 				{
@@ -560,7 +560,7 @@ namespace TicTacToe.Entities
 			// Try smart moves to avoid "traps" (HARD difficulty)
 			//_____________________________________________________________________________________________
 
-			if (_difficulty==AIDifficulty.Hard)
+			if (_difficulty==AIDifficulty.Impossible)
 			{
 				
 				//_____________________________________________________________________________________________
