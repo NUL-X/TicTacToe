@@ -7,7 +7,7 @@ using TicTacToe.Forms;
 
 namespace TicTacToe.Utils
 {
-    public class Network
+    public class Connection
     {
         #region Variables
 
@@ -36,7 +36,7 @@ namespace TicTacToe.Utils
 
         #region Constructor
 
-        public Network(Main gameFrom)
+        public Connection(Main gameFrom)
         {
             _gameForm = gameFrom; // References screen game
         }
@@ -90,7 +90,7 @@ namespace TicTacToe.Utils
                     // Packet indicating a game move
                     var x = int.Parse(Convert.ToChar(data[0]).ToString());
                     var y = int.Parse(Convert.ToChar(data[1]).ToString());
-                    if ((x <= 0 || x >= 4) || (y <= 0 || y >= 4)) continue;
+                    if ((x <= 0 || x >= 3) || (y <= 0 || y >= 3)) continue;
                     _gameForm.isConnected = true;
                     _gameForm.MakeMove(x, y);
                 }
@@ -98,7 +98,7 @@ namespace TicTacToe.Utils
             catch (ThreadAbortException) { }
             catch (Exception ex)
             {
-                MessageBox.Show("An error ocurred: " + ex.Message + "\n" + ex.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error ocurred: " + ex.Message + '\n' + ex.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _gameForm.DisconnectButton_Click(null, null);
                 return;
             }
@@ -134,12 +134,14 @@ namespace TicTacToe.Utils
                 _gameForm.RestartGame();
                 _gameForm.SetStatusMessage("Connected!");
                 _onlineServer = true;
+                Console.WriteLine("Server up");
 
                 while (_onlineServer)
                 {
                     // Thread is blocked until receives data
                     try {
                         bytesReceived = _socketStream.Read(receivedData, 0, 2);
+                        Console.WriteLine("Receiving data");
                     } catch {
                         return;
                     }
@@ -157,7 +159,7 @@ namespace TicTacToe.Utils
                     // Packet indicating a game move
                     var x = int.Parse(Convert.ToChar(receivedData[0]).ToString());
                     var y = int.Parse(Convert.ToChar(receivedData[1]).ToString());
-                    if ((x <= 0 || x >= 4) || (y <= 0 || y >= 4)) continue;
+                    if ((x <= 0 || x >= 3) || (y <= 0 || y >= 3)) continue;
                     _gameForm.isConnected = true;
                     _gameForm.MakeMove(x, y);
                 }
@@ -175,18 +177,18 @@ namespace TicTacToe.Utils
 
         #region Packet Funtions
 
-        public void SendPacketTCP(byte[] pDados)
+        public void SendPacketTCP(byte[] data)
         {
             // Sends a packet via TCP
             try
             {
                 if (_socketStream == null || !_socketStream.CanWrite) return;
-                _socketStream.Write(pDados, 0, 2);
+                _socketStream.Write(data, 0, 2);
                 _socketStream.Flush();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error ocurred: " + ex.Message + "\n" + ex.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error ocurred: " + ex.Message + '\n' + ex.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _gameForm.DisconnectButton_Click(null, null);
                 return;
             }
