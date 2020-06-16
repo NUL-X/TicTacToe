@@ -3,9 +3,9 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace TicTacToe
+namespace TicTacToe.Forms
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -106,7 +106,7 @@ namespace TicTacToe
 
 
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 

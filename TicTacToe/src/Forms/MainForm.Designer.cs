@@ -1,6 +1,6 @@
-﻿namespace TicTacToe
+﻿namespace TicTacToe.Forms
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicTacToe.Forms.MainForm));
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_back = new Bunifu.Framework.UI.BunifuImageButton();
@@ -38,21 +38,18 @@
             this.pb_close = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.userControl11 = new TicTacToe.UserControl1();
-            this.menu1 = new TicTacToe.Menu();
-            this.gridForm1 = new TicTacToe.GridForm();
+            this.userControl11 = new TicTacToe.Forms.UserControl1();
+            this.menu1 = new TicTacToe.Forms.Menu();
+            this.gridForm1 = new TicTacToe.Forms.GridForm();
             this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.btn_back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pb_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pb_close)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_back
-            // 
             this.btn_back.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.btn_back, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.btn_back, BunifuAnimatorNS.DecorationType.None);
-            this.btn_back.Image = global::TicTacToe.Properties.Resources.icons8_back_arrow.ToBitmap();
+            this.btn_back.Image = TicTacToe.Properties.Resources.icons8_back_arrow.ToBitmap();
             this.btn_back.ImageActive = null;
             this.btn_back.Location = new System.Drawing.Point(14, 14);
             this.btn_back.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -65,13 +62,10 @@
             this.btn_back.Visible = false;
             this.btn_back.Zoom = 10;
             this.btn_back.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
-            // pb_min
-            // 
             this.pb_min.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuTransition1.SetDecoration(this.pb_min, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pb_min, BunifuAnimatorNS.DecorationType.None);
-            this.pb_min.Image = global::TicTacToe.Properties.Resources.icons8_subtract_5.ToBitmap();
+            this.pb_min.Image = TicTacToe.Properties.Resources.icons8_subtract_5.ToBitmap();
             this.pb_min.Location = new System.Drawing.Point(1024, 0);
             this.pb_min.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pb_min.Name = "pb_min";
@@ -84,13 +78,10 @@
             this.pb_min.Click += new System.EventHandler(this.pb_min_Click);
             this.pb_min.MouseEnter += new System.EventHandler(this.pb_min_MouseEnter);
             this.pb_min.MouseLeave += new System.EventHandler(this.pb_min_MouseLeave);
-            // 
-            // pb_close
-            // 
             this.pb_close.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuTransition1.SetDecoration(this.pb_close, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pb_close, BunifuAnimatorNS.DecorationType.None);
-            this.pb_close.Image = global::TicTacToe.Properties.Resources.icons8_delete_5.ToBitmap();
+            this.pb_close.Image = TicTacToe.Properties.Resources.icons8_delete_5.ToBitmap();
             this.pb_close.Location = new System.Drawing.Point(1095, 0);
             this.pb_close.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pb_close.Name = "pb_close";
@@ -103,13 +94,7 @@
             this.pb_close.Click += new System.EventHandler(this.pb_close_Click);
             this.pb_close.MouseLeave += new System.EventHandler(this.pb_close_MouseLeave);
             this.pb_close.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
-            // 
-            // timer1
-            // 
             this.timer1.Interval = 1500;
-            // 
-            // bunifuTransition1
-            // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransition1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             animation1.AnimateOnlyDifferences = true;
@@ -130,9 +115,6 @@
             this.bunifuTransition1.DefaultAnimation = animation1;
             this.bunifuTransition1.Interval = 50;
             this.bunifuTransition1.MaxAnimationTime = 2500;
-            // 
-            // userControl11
-            // 
             this.userControl11.BackColor = System.Drawing.Color.White;
             this.userControl11.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.bunifuTransition2.SetDecoration(this.userControl11, BunifuAnimatorNS.DecorationType.None);
@@ -142,9 +124,6 @@
             this.userControl11.Name = "userControl11";
             this.userControl11.Size = new System.Drawing.Size(1162, 858);
             this.userControl11.TabIndex = 2;
-            // 
-            // menu1
-            // 
             this.menu1.BackColor = System.Drawing.Color.White;
             this.bunifuTransition2.SetDecoration(this.menu1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.menu1, BunifuAnimatorNS.DecorationType.None);
@@ -153,9 +132,6 @@
             this.menu1.Name = "menu1";
             this.menu1.Size = new System.Drawing.Size(1123, 889);
             this.menu1.TabIndex = 3;
-            // 
-            // gridForm1
-            // 
             this.gridForm1.BackColor = System.Drawing.Color.White;
             this.bunifuTransition2.SetDecoration(this.gridForm1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.gridForm1, BunifuAnimatorNS.DecorationType.None);
@@ -164,9 +140,6 @@
             this.gridForm1.Name = "gridForm1";
             this.gridForm1.Size = new System.Drawing.Size(1110, 880);
             this.gridForm1.TabIndex = 4;
-            // 
-            // bunifuTransition2
-            // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.bunifuTransition2.Cursor = null;
             animation2.AnimateOnlyDifferences = true;
@@ -185,9 +158,6 @@
             animation2.TimeCoeff = 0F;
             animation2.TransparencyCoeff = 0F;
             this.bunifuTransition2.DefaultAnimation = animation2;
-            // 
-            // Form1
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -204,7 +174,7 @@
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Tic Tac Toe";
             ((System.ComponentModel.ISupportInitialize) (this.btn_back)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pb_min)).EndInit();
@@ -215,13 +185,13 @@
         private Bunifu.Framework.UI.BunifuImageButton btn_back;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition2;
-        private TicTacToe.GridForm gridForm1;
-        private TicTacToe.Menu menu1;
+        private TicTacToe.Forms.GridForm gridForm1;
+        private TicTacToe.Forms.Menu menu1;
         private System.Windows.Forms.PictureBox pb_close;
         private System.Windows.Forms.PictureBox pb_min;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private TicTacToe.UserControl1 userControl11;
+        private TicTacToe.Forms.UserControl1 userControl11;
 
         #endregion
     }

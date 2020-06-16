@@ -1,45 +1,46 @@
-﻿using System.Media;
+﻿using System.IO;
+using System.Media;
+using TicTacToe.Properties;
 
-namespace TicTacToe
+namespace TicTacToe.Utils
 {
     class SoundEffectsControl
     {
-/*sounds\\multimedia_rollover_044.mp3*/
         public void MoveSound()
         {
-         soundPlay(@"sounds//multimedia_rollover.wav");
+            soundPlay(Resources.multimedia_rollover);
         }
 
         public void MenuClickSound()
         {
-            soundPlay(@"sounds//zapsplat_office_calculator_button_press.wav");
+            soundPlay(Resources.zapsplat_office_calculator_button_press);
         }
 
         public void PlayerA()
         {
-            soundPlay(@"sounds//PlayerA.wav");
+            soundPlay(Resources.PlayerA);
         }
 
         public void PlayerB()
         {
-            soundPlay(@"sounds//PlayerB.wav");
+            soundPlay(Resources.PlayerB);
 
         }
 
         public void Lose()
         {
-            soundPlay(@"sounds//Lose.wav");
+            soundPlay(Resources.Lose);
         }
 
         public void Win()
         {
-            soundPlay(@"sounds//Win.wav");
+            soundPlay(Resources.Win);
         }
-        private void soundPlay(string path){
-         using (var soundPlayer = new SoundPlayer(path))
-         {
-            soundPlayer.Play(); // can also use soundPlayer.PlaySync()
-         }
+        private void soundPlay(Stream soundeffect){
+            using (var soundPlayer = new SoundPlayer(soundeffect))
+            {
+                soundPlayer.Play(); // can also use soundPlayer.PlaySync()
+            }
         }
   
 }

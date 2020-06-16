@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using TicTacToe.Entities;
 
-namespace TicTacToe
+namespace TicTacToe.Forms
 {
     public partial class ScoreBoard : UserControl
     {
