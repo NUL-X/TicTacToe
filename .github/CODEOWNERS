@@ -1,0 +1,11 @@
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# Owners will be requested for
+# review when someone opens a pull request.
+*       @MERZAK-X @Youssef-AH @Yassine-Ag
+
+# Dir owners
+TicTacToe/src/Entities/    @Youssef-AH @MERZAK-X
+TicTacToe/src/Utils/	   @Youssef-AH @MERZAK-X
+TicTacToe/src/Forms/       @Yassine-Ag
+TicTacToe/Resources/	   @Yassine-Ag
