@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using TicTacToe;
-using TicTacToe;
+using TicTacToe.Entities;
+using TicTacToe.Utils;
 using static TicTacToe.Entities.Structures;
 
-namespace TicTacToe
+namespace TicTacToe.Forms
 {
     public partial class GridForm : UserControl
     {
@@ -191,4 +191,5 @@ namespace TicTacToe
 
         public void DisconnectButton_Click(object sender, EventArgs args) { }
     }
+
 }

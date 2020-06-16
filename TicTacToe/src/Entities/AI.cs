@@ -1,6 +1,7 @@
 ﻿using static TicTacToe.Entities.Structures;
 using System;
 using TicTacToe;
+using TicTacToe.Forms;
 
 namespace TicTacToe.Entities
 {

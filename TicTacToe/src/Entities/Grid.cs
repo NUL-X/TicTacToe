@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System.Drawing;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TicTacToe;
-using TicTacToe;
+using TicTacToe.Forms;
+using TicTacToe.Utils;
 
-namespace TicTacToe
+namespace TicTacToe.Entities
 {
     public class Grid
     {

@@ -162,20 +162,17 @@
     <Compile Include="src\Entities\Player.cs" />
     <Compile Include="src\Entities\Structures.cs" />
     <Compile Include="src\Entities\Tournament.cs" />
-    <Compile Include="src\Utils\Connection.cs" />
-    <Compile Include="src\Utils\DrawGraphics.cs" />
-    <Compile Include="src\Forms\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\Entities\Grid.cs" />
     <Compile Include="src\Forms\GridForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="src\Forms\GridForm.Designer.cs">
       <DependentUpon>GridForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Forms\Menu.cs">
       <SubType>UserControl</SubType>
@@ -183,36 +180,39 @@
     <Compile Include="src\Forms\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\Entities\Players.cs" />
-    <Compile Include="src\Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Forms\ScoreBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="src\Forms\ScoreBoard.Designer.cs">
       <DependentUpon>ScoreBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\Utils\SoundEffects.cs" />
     <Compile Include="src\Forms\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="src\Forms\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Utils\Connection.cs" />
+    <Compile Include="src\Utils\DrawGraphics.cs" />
+    <Compile Include="src\Entities\Grid.cs" />
+    <Compile Include="src\Entities\Players.cs" />
+    <Compile Include="src\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Utils\SoundEffects.cs" />
     <Compile Include="src\Utils\StringUtils.cs" />
-    <EmbeddedResource Include="src\Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\Forms\GridForm.resx">
-      <DependentUpon>GridForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\Forms\Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\GridForm.resx">
+      <DependentUpon>GridForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\ScoreBoard.resx">
       <DependentUpon>ScoreBoard.cs</DependentUpon>
@@ -345,6 +345,8 @@
     <None Include="Resources\Webp.net-resizeimage %285%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\zapsplat_office_calculator_button_press.wav" />
+    <None Include="Resources\Win.wav" />
     <None Include="Resources\tic-tac-toe.ico" />
     <None Include="Resources\two-players-game-interface-symbol.png" />
     <None Include="Resources\xoxo_4x.png" />
@@ -375,8 +377,11 @@
     <None Include="Resources\icons8_back_arrow.ico" />
     <None Include="Resources\icons8_delete_4.ico" />
     <None Include="Resources\icons8_delete_5.ico" />
+    <None Include="Resources\Lose.wav" />
+    <None Include="Resources\multimedia_rollover.wav" />
+    <None Include="Resources\PlayerA.wav" />
+    <None Include="Resources\PlayerB.wav" />
     <Content Include="Resources\Replay.ico" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

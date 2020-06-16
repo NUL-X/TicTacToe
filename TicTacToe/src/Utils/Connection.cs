@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Forms;
 using TicTacToe;
+using TicTacToe.Forms;
 
 namespace TicTacToe.Utils
 {

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
+using TicTacToe.Entities;
+using TicTacToe.Utils;
 
-namespace TicTacToe
+namespace TicTacToe.Forms
 {
 
     public partial class Menu : UserControl
@@ -58,7 +60,7 @@ namespace TicTacToe
         {
             Players.TwoPlayer();
 
-           ((Form1)this.ParentForm).ShowGridForm();
+           ((MainForm)this.ParentForm).ShowGridForm();
 
         }
 
@@ -66,21 +68,21 @@ namespace TicTacToe
         {
             Players.OnePlayer(1);
 
-            ((Form1)this.ParentForm).ShowGridForm();
+            ((MainForm)this.ParentForm).ShowGridForm();
         }
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
             Players.OnePlayer(2);
 
-            ((Form1)this.ParentForm).ShowGridForm();
+            ((MainForm)this.ParentForm).ShowGridForm();
         }
 
         private void bunifuThinButton25_Click(object sender, EventArgs e)
         {
             Players.OnePlayer(3);
             
-            ((Form1)this.ParentForm).ShowGridForm();
+            ((MainForm)this.ParentForm).ShowGridForm();
         }
     }
 }

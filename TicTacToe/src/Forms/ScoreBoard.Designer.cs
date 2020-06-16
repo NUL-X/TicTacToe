@@ -1,4 +1,4 @@
-﻿namespace TicTacToe
+﻿namespace TicTacToe.Forms
 {
     partial class ScoreBoard
     {

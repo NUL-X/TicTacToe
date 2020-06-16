@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using TicTacToe.Properties;
 
-namespace TicTacToe
+namespace TicTacToe.Utils
 {
     class DrawGraphics
     {

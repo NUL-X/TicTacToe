@@ -1,4 +1,4 @@
-﻿namespace TicTacToe
+﻿namespace TicTacToe.Forms
 {
     partial class Menu
     {
@@ -121,7 +121,7 @@
             this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.FromArgb(((int) (((byte) (50)))), ((int) (((byte) (50)))), ((int) (((byte) (50)))));
             this.bunifuThinButton25.Location = new System.Drawing.Point(55, 171);
-            this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuThinButton25.Name = "bunifuThinButton25";
             this.bunifuThinButton25.Size = new System.Drawing.Size(204, 64);
             this.bunifuThinButton25.TabIndex = 6;
@@ -149,7 +149,7 @@
             this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.FromArgb(((int) (((byte) (50)))), ((int) (((byte) (50)))), ((int) (((byte) (50)))));
             this.bunifuThinButton24.Location = new System.Drawing.Point(55, 95);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
             this.bunifuThinButton24.Size = new System.Drawing.Size(204, 64);
             this.bunifuThinButton24.TabIndex = 5;
@@ -177,7 +177,7 @@
             this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.FromArgb(((int) (((byte) (50)))), ((int) (((byte) (50)))), ((int) (((byte) (50)))));
             this.bunifuThinButton23.Location = new System.Drawing.Point(55, 25);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(204, 64);
             this.bunifuThinButton23.TabIndex = 4;
@@ -217,7 +217,7 @@
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.FromArgb(((int) (((byte) (50)))), ((int) (((byte) (50)))), ((int) (((byte) (50)))));
             this.bunifuThinButton22.Location = new System.Drawing.Point(60, 156);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(204, 64);
             this.bunifuThinButton22.TabIndex = 3;
@@ -244,7 +244,7 @@
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int) (((byte) (50)))), ((int) (((byte) (50)))), ((int) (((byte) (50)))));
             this.bunifuThinButton21.Location = new System.Drawing.Point(60, 41);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(204, 64);
             this.bunifuThinButton21.TabIndex = 2;
